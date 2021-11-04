@@ -1,4 +1,4 @@
-# User Snippets for Visual Studion code
+# User Snippets for Visual Studio code
 
 ## for vue developers
 
