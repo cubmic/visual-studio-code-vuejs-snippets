@@ -1,0 +1,195 @@
+{
+  // math
+	"m-min": {
+    "scope": "javascript,html",
+		"prefix": "m-min",
+		"body": [
+			"Math.min(${1:number1}, ${2:number2})"
+		],
+		"description": "Array Map"
+	},
+  // loops
+  "l-for": {
+    "scope": "javascript,html",
+		"prefix": "l-for",
+		"body": [
+			"for(let i = 0, i < ${1:var}, i++) {",
+      "  ${2}",
+      "}"
+		],
+		"description": "For Loop"
+	},
+  "l-for-reverse": {
+    "scope": "javascript,html",
+		"prefix": "l-for-reverse",
+		"body": [
+			"for(let i = ${1:var}, i > 0, i--) {",
+      "  ${2}",
+      "}"
+		],
+		"description": "For Loop reverse"
+	},
+  "l-for-of": {
+    "scope": "javascript,html",
+		"prefix": "l-for-of",
+		"body": [
+			"for(const ${1:item} of ${2:array}) {",
+      "  ${3}",
+      "}"
+		],
+		"description": "For of Loop"
+	},
+  "l-for-in": {
+    "scope": "javascript,html",
+		"prefix": "l-for-in",
+		"body": [
+			"for(const ${1:key} in ${2:array}) {",
+      "  ${3}",
+      "}"
+		],
+		"description": "For in Loop"
+	},
+  // array
+  "a-map": {
+    "scope": "javascript,html",
+		"prefix": "a-map",
+		"body": [
+			".map(o => o.${1:key})"
+		],
+		"description": "Array Map"
+	},
+	"a-filter": {
+    "scope": "javascript,html",
+		"prefix": "a-filter",
+		"body": [
+			".filter(o => o.${1:key})"
+		],
+		"description": "Array Filter"
+	},
+	"a-find": {
+    "scope": "javascript,html",
+		"prefix": "a-find",
+		"body": [
+			".find(o => o.${1:key})"
+		],
+		"description": "Array Find"
+	},
+	"a-sort-number": {
+    "scope": "javascript,html",
+		"prefix": "a-sort-number",
+		"body": [
+			".sort((a, b) => a - b)"
+		],
+		"description": "Array Sort Number"
+	},
+	"a-sort-string": {
+    "scope": "javascript,html",
+		"prefix": "a-sort-string",
+		"body": [
+			".sort((a, b) => a.localeCompare(b))"
+		],
+		"description": "Array Sort Alphanumeric"
+	},
+	"a-sum": {
+    "scope": "javascript,html",
+		"prefix": "a-sum",
+		"body": [
+			"arraySum (array) => array.reduce((a, b) => a + b, 0)"
+		],
+		"description": "Array Summe"
+	},
+  // console
+	"o-copy": {
+    "scope": "javascript,html",
+		"prefix": "o-copy",
+		"body": [
+			"JSON.parse(JSON.stringify(${1:key}))"
+		],
+		"description": "Object Copy without functions"
+	},
+  "o-dump": {
+    "scope": "javascript,html",
+    "prefix": "o-dump",
+    "body": [
+      "console.log(JSON.stringify(${1:obj}, null, 2).replace(/\"/g, \"'\").replace(/('([^']*)'):/g, '\\$2:'))"
+    ],
+    "description": "Print Javascript Object for copy as code"
+	},
+  // vue component
+	"vue2-content": {
+    "scope": "vue",
+		"prefix": "vue2-content",
+		"body": [
+			"<template>",
+			"  <div>",
+      "    Hello World !",
+			"  </div>",
+			"</template>",
+			"",
+			"<script>",
+			"export default {",
+			"  name: '$TM_FILENAME_BASE'",
+			"}",
+			"</script>",
+			"",
+			"<style>",
+			"</style>",
+      ""
+		],
+		"description": "Initial Vue2 Component"
+	},
+  "vue3-content": {
+    "scope": "vue",
+		"prefix": "vue3-content",
+		"body": [
+			"<template>",
+			"  <div>",
+      "    Hello World !",
+			"  </div>",
+			"</template>",
+			"",
+			"<script>",
+      "import { defineComponent } from 'vue'",
+      "export default defineComponent({",
+			"  name: '$TM_FILENAME_BASE'",
+			"})",
+			"</script>",
+			"",
+			"<style>",
+			"</style>",
+      ""
+		],
+		"description": "Initial Vue3 Component"
+	},
+  // vue directive
+  "vue2-directive": {
+    "scope": "javascript",
+    "prefix": "vue2-directive",
+    "body": [
+			"export const $TM_FILENAME_BASE = {",
+			"  inserted (el, binding) {",
+      "    ",
+      "  },",
+			"  unbind (el) {",
+			"    ",
+			"  }",
+			"}"
+		],
+		"description": "Initial Vue2 Directive"
+  },
+  "vue3-directive": {
+    "scope": "javascript",
+    "prefix": "vue3-directive",
+    "body": [
+			"export const $TM_FILENAME_BASE = {",
+			"  created (el, binding) {",
+      "    ",
+      "  },",
+			"  unmounted (el) {",
+			"    ",
+			"  }",
+			"}"
+		],
+		"description": "Initial Vue3 Directive"
+  }
+}
